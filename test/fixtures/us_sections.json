@@ -1,0 +1,96 @@
+{
+  "opening": 712000,
+  "closing": 1353691,
+  "transactions": [
+    {
+      "date": "2026-06-03",
+      "amount": 131942,
+      "description": "PAYROLL ACME TOOLS INC"
+    },
+    {
+      "date": "2026-06-10",
+      "amount": 242299,
+      "description": "TRANSFER FROM J SMITH"
+    },
+    {
+      "date": "2026-06-17",
+      "amount": 197348,
+      "description": "INTEREST PAYMENT"
+    },
+    {
+      "date": "2026-06-24",
+      "amount": 265173,
+      "description": "REFUND HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-06-02",
+      "amount": -1456,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    },
+    {
+      "date": "2026-06-04",
+      "amount": -7265,
+      "description": "CARD 4417 COFFEE CORNER"
+    },
+    {
+      "date": "2026-06-06",
+      "amount": -19410,
+      "description": "ONLINE TRANSFER TO SAVINGS"
+    },
+    {
+      "date": "2026-06-08",
+      "amount": -16061,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-06-10",
+      "amount": -16482,
+      "description": "DEBIT CARD FUEL STATION 21"
+    },
+    {
+      "date": "2026-06-12",
+      "amount": -2885,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-06-14",
+      "amount": -14520,
+      "description": "PHARMACY PLUS 0042"
+    },
+    {
+      "date": "2026-06-16",
+      "amount": -15633,
+      "description": "STREAMING SUBSCRIPTION"
+    },
+    {
+      "date": "2026-06-18",
+      "amount": -6371,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-06-20",
+      "amount": -28680,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2026-06-22",
+      "amount": -28340,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2026-06-24",
+      "amount": -28697,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2026-06-26",
+      "amount": -1804,
+      "description": "GYM MEMBERSHIP"
+    },
+    {
+      "date": "2026-06-28",
+      "amount": -7467,
+      "description": "INSURANCE PREMIUM"
+    }
+  ]
+}

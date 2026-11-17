@@ -1,0 +1,136 @@
+{
+  "opening": 300000,
+  "closing": 681564,
+  "transactions": [
+    {
+      "date": "2025-12-19",
+      "amount": -2877,
+      "description": "CARD 4417 COFFEE CORNER"
+    },
+    {
+      "date": "2025-12-19",
+      "amount": -6412,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2025-12-20",
+      "amount": -11892,
+      "description": "ONLINE TRANSFER TO SAVINGS"
+    },
+    {
+      "date": "2025-12-20",
+      "amount": -123456,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2025-12-21",
+      "amount": -2852,
+      "description": "DEBIT CARD FUEL STATION 21"
+    },
+    {
+      "date": "2025-12-22",
+      "amount": 85188,
+      "description": "REFUND HARDWARE DEPOT"
+    },
+    {
+      "date": "2025-12-23",
+      "amount": -3962,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2025-12-24",
+      "amount": -1344,
+      "description": "GYM MEMBERSHIP"
+    },
+    {
+      "date": "2025-12-25",
+      "amount": -18847,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2025-12-26",
+      "amount": -21428,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2025-12-27",
+      "amount": -10810,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2025-12-28",
+      "amount": 209299,
+      "description": "PAYROLL ACME TOOLS INC"
+    },
+    {
+      "date": "2025-12-28",
+      "amount": -15007,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2025-12-28",
+      "amount": -6042,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    },
+    {
+      "date": "2025-12-28",
+      "amount": -2416,
+      "description": "DEBIT CARD FUEL STATION 21"
+    },
+    {
+      "date": "2025-12-28",
+      "amount": -19028,
+      "description": "CARD 4417 COFFEE CORNER"
+    },
+    {
+      "date": "2025-12-28",
+      "amount": -8432,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2025-12-28",
+      "amount": 312795,
+      "description": "INTEREST PAYMENT"
+    },
+    {
+      "date": "2026-01-01",
+      "amount": -14469,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-01-02",
+      "amount": -17125,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-01-03",
+      "amount": -3264,
+      "description": "PHARMACY PLUS 0042"
+    },
+    {
+      "date": "2026-01-04",
+      "amount": -4206,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2026-01-05",
+      "amount": -5608,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-01-06",
+      "amount": 102498,
+      "description": "INTEREST PAYMENT"
+    },
+    {
+      "date": "2026-01-07",
+      "amount": -13164,
+      "description": "STREAMING SUBSCRIPTION"
+    },
+    {
+      "date": "2026-01-08",
+      "amount": -15575,
+      "description": "HARDWARE DEPOT"
+    }
+  ]
+}

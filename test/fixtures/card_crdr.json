@@ -1,0 +1,97 @@
+{
+  "accountType": "liability",
+  "opening": 125000,
+  "closing": 176427,
+  "transactions": [
+    {
+      "date": "2026-05-03",
+      "amount": -15461,
+      "description": "GYM MEMBERSHIP"
+    },
+    {
+      "date": "2026-05-04",
+      "amount": -11138,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-05-05",
+      "amount": -3535,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-05-05",
+      "amount": -6492,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2026-05-05",
+      "amount": -14145,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-05-05",
+      "amount": -15306,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-05-05",
+      "amount": 50000,
+      "description": "PAYMENT - THANK YOU"
+    },
+    {
+      "date": "2026-05-06",
+      "amount": -13391,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-05-06",
+      "amount": -3309,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2026-05-07",
+      "amount": -8840,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    },
+    {
+      "date": "2026-05-07",
+      "amount": -7151,
+      "description": "PHARMACY PLUS 0042"
+    },
+    {
+      "date": "2026-05-08",
+      "amount": -13500,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-05-09",
+      "amount": -7370,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2026-05-09",
+      "amount": -12694,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-05-10",
+      "amount": 50000,
+      "description": "PAYMENT - THANK YOU"
+    },
+    {
+      "date": "2026-05-11",
+      "amount": -8575,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-05-11",
+      "amount": -2418,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-05-11",
+      "amount": -8102,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    }
+  ]
+}

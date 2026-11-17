@@ -1,0 +1,206 @@
+{
+  "opening": 98765,
+  "closing": 622448,
+  "transactions": [
+    {
+      "date": "2026-02-02",
+      "amount": -8933,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-02-03",
+      "amount": -21316,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2026-02-04",
+      "amount": -2741,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2026-02-05",
+      "amount": -123456,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2026-02-06",
+      "amount": -13109,
+      "description": "DEBIT CARD FUEL STATION 21"
+    },
+    {
+      "date": "2026-02-06",
+      "amount": 193664,
+      "description": "TRANSFER FROM J SMITH"
+    },
+    {
+      "date": "2026-02-06",
+      "amount": -3320,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-02-06",
+      "amount": -1049,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2026-02-07",
+      "amount": -14554,
+      "description": "CARD 4417 COFFEE CORNER"
+    },
+    {
+      "date": "2026-02-08",
+      "amount": -23251,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-02-08",
+      "amount": -24332,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2026-02-09",
+      "amount": 282661,
+      "description": "TRANSFER FROM J SMITH"
+    },
+    {
+      "date": "2026-02-10",
+      "amount": -21638,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-02-11",
+      "amount": -21932,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-02-11",
+      "amount": -18287,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-02-12",
+      "amount": -14984,
+      "description": "PHARMACY PLUS 0042"
+    },
+    {
+      "date": "2026-02-12",
+      "amount": -6496,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-02-12",
+      "amount": 64165,
+      "description": "TRANSFER FROM J SMITH"
+    },
+    {
+      "date": "2026-02-12",
+      "amount": -1039,
+      "description": "CARD 4417 COFFEE CORNER"
+    },
+    {
+      "date": "2026-02-12",
+      "amount": -14716,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-02-13",
+      "amount": -3723,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-02-14",
+      "amount": -13045,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    },
+    {
+      "date": "2026-02-15",
+      "amount": -18457,
+      "description": "DEBIT CARD FUEL STATION 21"
+    },
+    {
+      "date": "2026-02-16",
+      "amount": 212628,
+      "description": "PAYROLL ACME TOOLS INC"
+    },
+    {
+      "date": "2026-02-17",
+      "amount": -9774,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-02-18",
+      "amount": -17603,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    },
+    {
+      "date": "2026-02-18",
+      "amount": -6578,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    },
+    {
+      "date": "2026-02-19",
+      "amount": -8695,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2026-02-20",
+      "amount": -13931,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-02-20",
+      "amount": 60090,
+      "description": "REFUND HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-02-20",
+      "amount": -4233,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-02-21",
+      "amount": -12289,
+      "description": "GYM MEMBERSHIP"
+    },
+    {
+      "date": "2026-02-21",
+      "amount": -22946,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-02-22",
+      "amount": -11524,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-02-23",
+      "amount": -8361,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2026-02-24",
+      "amount": 249792,
+      "description": "INTEREST PAYMENT"
+    },
+    {
+      "date": "2026-02-25",
+      "amount": -22727,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-02-25",
+      "amount": -2604,
+      "description": "STREAMING SUBSCRIPTION"
+    },
+    {
+      "date": "2026-02-25",
+      "amount": -18520,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2026-02-26",
+      "amount": -9154,
+      "description": "PHARMACY PLUS 0042"
+    }
+  ]
+}

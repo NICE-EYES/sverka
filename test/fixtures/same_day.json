@@ -1,0 +1,101 @@
+{
+  "opening": 250000,
+  "closing": 378049,
+  "transactions": [
+    {
+      "date": "2026-07-02",
+      "amount": -2864,
+      "description": "PHARMACY PLUS 0042"
+    },
+    {
+      "date": "2026-07-04",
+      "amount": -6382,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-07-04",
+      "amount": -301,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2026-07-04",
+      "amount": -4378,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-07-06",
+      "amount": -3718,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-07-08",
+      "amount": -4723,
+      "description": "HARDWARE DEPOT"
+    },
+    {
+      "date": "2026-07-08",
+      "amount": -3329,
+      "description": "DEBIT CARD FUEL STATION 21"
+    },
+    {
+      "date": "2026-07-10",
+      "amount": -8774,
+      "description": "CARD 4417 COFFEE CORNER"
+    },
+    {
+      "date": "2026-07-10",
+      "amount": -523,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    },
+    {
+      "date": "2026-07-12",
+      "amount": -1464,
+      "description": "ONLINE TRANSFER TO SAVINGS"
+    },
+    {
+      "date": "2026-07-12",
+      "amount": -7097,
+      "description": "STREAMING SUBSCRIPTION"
+    },
+    {
+      "date": "2026-07-12",
+      "amount": -2441,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-07-14",
+      "amount": -1110,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-07-16",
+      "amount": 59850,
+      "description": "PAYROLL ACME TOOLS INC"
+    },
+    {
+      "date": "2026-07-18",
+      "amount": -4536,
+      "description": "ONLINE TRANSFER TO SAVINGS"
+    },
+    {
+      "date": "2026-07-18",
+      "amount": -7455,
+      "description": "DEBIT CARD FUEL STATION 21"
+    },
+    {
+      "date": "2026-07-20",
+      "amount": -2825,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2026-07-20",
+      "amount": 66481,
+      "description": "TRANSFER FROM J SMITH"
+    },
+    {
+      "date": "2026-07-20",
+      "amount": 63638,
+      "description": "INTEREST PAYMENT"
+    }
+  ]
+}

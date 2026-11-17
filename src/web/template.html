@@ -1,0 +1,225 @@
+<title>Sverka</title>
+<meta name="description" content="Bank statement PDF to a verified transaction table. Runs locally in the browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a working desk — intake strip on top, statement sheets in the main column,
+   export tray docked on the right (stacks under the sheets on narrow screens). */
+:root {
+  --paper: #eef2f0;
+  --sheet: #ffffff;
+  --ink: #15211d;
+  --ink-2: #4f5f59;
+  --rule: #d5dfdb;
+  --rule-strong: #b9c7c1;
+  --stamp: #2442c9;
+  --stamp-soft: #e7ebfb;
+  --ok: #17784a;
+  --ok-soft: #e3f3ea;
+  --bad: #b8322a;
+  --bad-soft: #fbe9e7;
+  --warn: #9a6514;
+  --warn-soft: #fbf0dc;
+  --font-display: 'Unbounded', 'Onest', system-ui, sans-serif;
+  --font-body: 'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-num: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1412; --sheet: #151d1a; --ink: #e3ebe7; --ink-2: #98a8a1; --rule: #25322d; --rule-strong: #34443e;
+    --stamp: #8ea2ff; --stamp-soft: #1c2440; --ok: #5fd39a; --ok-soft: #14291f; --bad: #ff8a7d; --bad-soft: #351816;
+    --warn: #e8b55c; --warn-soft: #2e2413; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1412; --sheet: #151d1a; --ink: #e3ebe7; --ink-2: #98a8a1; --rule: #25322d; --rule-strong: #34443e;
+  --stamp: #8ea2ff; --stamp-soft: #1c2440; --ok: #5fd39a; --ok-soft: #14291f; --bad: #ff8a7d; --bad-soft: #351816;
+  --warn: #e8b55c; --warn-soft: #2e2413; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--stamp); outline-offset: 2px; border-radius: 4px; }
+
+.wrap { max-width: 1280px; margin: 0 auto; padding-block: 20px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* top */
+.top { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between; margin-bottom: 18px; }
+.brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; min-width: 0; }
+.wordmark { font-family: var(--font-display); font-weight: 700; font-size: 26px; letter-spacing: -0.01em; margin: 0; }
+.wordmark span { color: var(--stamp); }
+.tagline { margin: 0; color: var(--ink-2); font-size: 15px; text-wrap: balance; }
+.lang { border: 1px solid var(--rule-strong); background: var(--sheet); border-radius: 999px; padding: 4px 12px; cursor: pointer; font-weight: 600; font-size: 13px; letter-spacing: 0.06em; }
+
+/* intake */
+.intake { display: grid; gap: 14px; margin-bottom: 22px; }
+/* The drop zone is ruled like ledger paper: every text line sits on a 28px rule. */
+.drop { position: relative; border: 1.5px dashed var(--rule-strong); border-radius: var(--radius);
+  background-color: var(--sheet);
+  background-image: repeating-linear-gradient(to bottom, transparent 0 27px, var(--rule) 27px 28px);
+  padding: 28px 22px; line-height: 28px; display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap; transition: border-color .15s, background-color .15s; }
+.drop.over { border-color: var(--stamp); background-color: var(--stamp-soft); }
+.drop h2 { font-family: var(--font-display); font-weight: 600; font-size: 19px; line-height: 28px; margin: 0; text-wrap: balance; }
+.drop p { margin: 0; color: var(--ink-2); line-height: 28px; }
+.drop .privacy { color: var(--ok); font-weight: 500; display: flex; gap: 8px; align-items: center; }
+.drop-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.btn { border: 1px solid var(--rule-strong); background: var(--sheet); border-radius: 8px; padding: 9px 16px; cursor: pointer; font-weight: 600; }
+.btn:hover { border-color: var(--ink-2); }
+.btn-primary { background: var(--stamp); border-color: var(--stamp); color: var(--sheet); }
+.btn-primary:hover { filter: brightness(1.08); border-color: var(--stamp); }
+.btn-quiet { border-color: transparent; background: transparent; color: var(--ink-2); padding-inline: 8px; }
+.btn-small { padding: 5px 10px; font-size: 13px; }
+.feats { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--ink-2); font-size: 14px; }
+.feats li { display: flex; gap: 8px; align-items: center; }
+.feats li::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--stamp); flex: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* desk */
+.desk { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (min-width: 1040px) { .desk { grid-template-columns: minmax(0, 1fr) 300px; } .tray { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); } }
+.sheets { display: grid; gap: 18px; min-width: 0; }
+.banner { border-radius: var(--radius); background: var(--warn-soft); color: var(--ink); padding: 10px 14px; font-size: 14px; border: 1px solid var(--rule); }
+.chain { display: grid; gap: 6px; font-size: 14px; }
+
+/* statement sheet */
+.stmt { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--radius); min-width: 0; overflow: hidden; }
+.stmt-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 16px; padding: 18px 20px 6px; align-items: start; }
+.stmt-title h2 { font-size: 17px; margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.meta { margin: 2px 0 0; color: var(--ink-2); font-size: 13.5px; font-variant-numeric: tabular-nums; }
+.stamp { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 7px 12px 6px; border: 2px solid currentColor; border-radius: 6px; outline: 1px solid currentColor; outline-offset: 2px;
+  transform: rotate(-3deg); white-space: nowrap; margin: 6px 6px 0 0; }
+.stamp-ok { color: var(--stamp); }
+.stamp-bad { color: var(--bad); }
+.stamp-none { color: var(--ink-2); }
+.stmt-body { padding: 0 20px 18px; display: grid; gap: 12px; }
+.lead { margin: 0; font-size: 14.5px; }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.chk { display: grid; grid-template-columns: 20px minmax(0,1fr); gap: 8px; font-size: 14px; font-variant-numeric: tabular-nums; }
+.chk .mark { font-weight: 700; text-align: center; }
+.chk.ok .mark { color: var(--ok); }
+.chk.fail .mark { color: var(--bad); }
+.chk.note .mark { color: var(--ink-2); }
+.fix { border: 1px solid var(--bad); background: var(--bad-soft); border-radius: 8px; padding: 12px 14px; display: grid; gap: 8px; font-size: 14px; }
+.fix .src { font-family: var(--font-num); font-size: 12.5px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 8px; overflow-x: auto; white-space: pre; }
+.fix-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.opts { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-size: 13.5px; color: var(--ink-2); }
+.seg { display: inline-flex; border: 1px solid var(--rule-strong); border-radius: 8px; overflow: hidden; margin-left: 8px; vertical-align: middle; }
+.seg button { border: 0; background: transparent; padding: 4px 10px; cursor: pointer; font-size: 13px; color: var(--ink-2); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); }
+.msg { font-size: 14px; padding: 10px 12px; border-radius: 8px; background: var(--paper); }
+.msg.err { background: var(--bad-soft); }
+.pw { display: flex; gap: 8px; flex-wrap: wrap; }
+.pw input { border: 1px solid var(--rule-strong); border-radius: 8px; padding: 8px 10px; background: var(--sheet); min-width: 0; flex: 1 1 180px; }
+
+/* table */
+.table-wrap { overflow: auto; max-height: 70vh; border-top: 1px solid var(--rule); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+thead th { position: sticky; top: 0; background: var(--sheet); text-align: left; font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); padding: 10px 10px 8px; border-bottom: 1px solid var(--rule-strong); z-index: 1; }
+td { padding: 6px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th.num, td.num { text-align: right; }
+td.n { color: var(--ink-2); font-size: 12px; font-family: var(--font-num); cursor: pointer; width: 1%; white-space: nowrap; }
+td.date { font-family: var(--font-num); font-size: 13px; white-space: nowrap; width: 1%; }
+td.amt, td.bal { font-family: var(--font-num); font-size: 13.5px; white-space: nowrap; font-variant-numeric: tabular-nums; width: 1%; }
+td.amt.neg { color: var(--bad); }
+td.amt.pos { color: var(--ok); }
+td.desc { min-width: 220px; overflow-wrap: anywhere; }
+td.chkc { width: 1%; white-space: nowrap; text-align: center; }
+.dot { display: inline-block; width: 18px; height: 18px; line-height: 18px; border-radius: 50%; font-size: 11px; font-weight: 700; text-align: center; }
+.dot.ok { background: var(--ok-soft); color: var(--ok); }
+.dot.bad { background: var(--bad); color: var(--sheet); }
+.dot.na { color: var(--ink-2); }
+tr.bad td { background: var(--bad-soft); }
+tr.excluded td { opacity: 0.45; text-decoration: line-through; }
+tr.excluded td.n, tr.excluded td.chkc { text-decoration: none; }
+tr.src-row td { background: var(--paper); font-family: var(--font-num); font-size: 12px; color: var(--ink-2); white-space: pre-wrap; }
+td.warn .v { border-bottom: 2px dotted var(--warn); }
+.inherited { color: var(--ink-2); }
+[contenteditable="true"] { border-radius: 4px; outline: none; padding: 1px 3px; margin: -1px -3px; }
+[contenteditable="true"]:hover { background: var(--paper); }
+[contenteditable="true"]:focus { background: var(--stamp-soft); box-shadow: inset 0 0 0 1px var(--stamp); }
+.rowbtn { border: 0; background: transparent; color: var(--ink-2); cursor: pointer; font-size: 15px; padding: 0 4px; line-height: 1; }
+.rowbtn:hover { color: var(--bad); }
+.edit-hint { color: var(--ink-2); font-size: 13px; margin: 0; }
+
+/* export tray */
+.tray { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--radius); padding: 16px; display: grid; gap: 12px; }
+.tray h2 { font-family: var(--font-display); font-weight: 600; font-size: 16px; margin: 0; }
+.scope { margin: -6px 0 0; color: var(--ink-2); font-size: 13.5px; }
+.formats { display: grid; gap: 4px; border: 0; margin: 0; padding: 0; }
+.fmt { display: grid; grid-template-columns: 18px minmax(0,1fr); gap: 2px 8px; padding: 7px 8px; border-radius: 8px; cursor: pointer; align-items: start; }
+.fmt:hover { background: var(--paper); }
+.fmt input { margin: 3px 0 0; accent-color: var(--stamp); }
+.fmt b { font-weight: 600; font-size: 14px; }
+.fmt small { grid-column: 2; color: var(--ink-2); font-size: 12.5px; line-height: 1.35; }
+.fmt:has(input:checked) { background: var(--stamp-soft); }
+.tray-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.tray-msg { font-size: 13.5px; min-height: 1.2em; margin: 0; color: var(--ink-2); }
+.tray-msg.err { color: var(--bad); }
+.tray textarea { width: 100%; min-height: 120px; font-family: var(--font-num); font-size: 12px; border: 1px solid var(--rule-strong); border-radius: 8px; padding: 8px; background: var(--paper); }
+.tray .warnline { font-size: 13px; color: var(--bad); margin: 0; }
+
+footer { margin-top: 30px; color: var(--ink-2); font-size: 13px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width: 560px) {
+  .stmt-head { grid-template-columns: minmax(0,1fr); }
+  .stamp { justify-self: start; }
+  .drop { padding: 20px 16px; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1 class="wordmark">Sver<span>ka</span></h1>
+      <p class="tagline" data-i18n="tagline"></p>
+    </div>
+    <button class="lang" id="lang-btn" type="button"></button>
+  </header>
+
+  <section class="intake" aria-label="Files">
+    <div class="drop" id="drop">
+      <div>
+        <h2 data-i18n="dropTitle"></h2>
+        <p data-i18n="dropHint"></p>
+        <p class="privacy"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 1 2 3.5V8c0 3.3 2.6 6.2 6 7 3.4-.8 6-3.7 6-7V3.5L8 1zm-1 10.2L4.3 8.5l1.1-1.1L7 9l3.6-3.6 1.1 1.1L7 11.2z"/></svg><span data-i18n="privacy"></span></p>
+      </div>
+      <div class="drop-actions">
+        <label class="btn btn-primary" for="file-input"><span data-i18n="choose"></span></label>
+        <input class="sr-only" id="file-input" type="file" accept="application/pdf,.pdf" multiple>
+        <button class="btn" id="sample-btn" type="button" data-i18n="trySample"></button>
+        <button class="btn btn-quiet" id="clear-btn" type="button" data-i18n="clearAll" hidden></button>
+      </div>
+    </div>
+    <ul class="feats">
+      <li data-i18n="feat1"></li><li data-i18n="feat2"></li><li data-i18n="feat3"></li><li data-i18n="feat4"></li>
+    </ul>
+  </section>
+
+  <div class="desk">
+    <div class="sheets">
+      <p class="banner" id="sample-banner" data-i18n="sampleBanner" hidden></p>
+      <div id="statements" class="sheets"></div>
+      <div id="chain" class="chain"></div>
+    </div>
+    <aside class="tray" id="tray" aria-labelledby="tray-title">
+      <h2 id="tray-title" data-i18n="exportTitle"></h2>
+      <p class="scope" id="scope"></p>
+      <fieldset class="formats" id="formats"></fieldset>
+      <p class="warnline" id="export-warn" hidden></p>
+      <div class="tray-actions">
+        <button class="btn btn-primary" id="dl-btn" type="button" data-i18n="download"></button>
+        <button class="btn" id="copy-btn" type="button" data-i18n="copy"></button>
+      </div>
+      <p class="tray-msg" id="tray-msg" aria-live="polite"></p>
+      <textarea id="copy-area" hidden readonly aria-label="Export text"></textarea>
+    </aside>
+  </div>
+
+  <footer><p data-i18n="footer"></p></footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<!--APP-->

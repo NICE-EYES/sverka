@@ -1,0 +1,116 @@
+{
+  "opening": 523410,
+  "closing": 1012013,
+  "transactions": [
+    {
+      "date": "2026-03-02",
+      "amount": -14346,
+      "description": "Überweisung Miete März"
+    },
+    {
+      "date": "2026-03-03",
+      "amount": -20629,
+      "description": "Lastschrift Mobilfunk REF 331819 AUTH CODE 7114"
+    },
+    {
+      "date": "2026-03-04",
+      "amount": -5960,
+      "description": "Kartenzahlung Tankstelle"
+    },
+    {
+      "date": "2026-03-05",
+      "amount": -123456,
+      "description": "Kartenzahlung Bäckerei Sonnenschein"
+    },
+    {
+      "date": "2026-03-06",
+      "amount": 119084,
+      "description": "Gehalt Muster GmbH REF 695153 AUTH CODE 2514"
+    },
+    {
+      "date": "2026-03-07",
+      "amount": -12319,
+      "description": "Überweisung Miete März"
+    },
+    {
+      "date": "2026-03-07",
+      "amount": -17964,
+      "description": "Kartenzahlung Tankstelle"
+    },
+    {
+      "date": "2026-03-08",
+      "amount": -6524,
+      "description": "Lastschrift Mobilfunk REF 171743 AUTH CODE 3317"
+    },
+    {
+      "date": "2026-03-08",
+      "amount": -13326,
+      "description": "Kartenzahlung Supermarkt Nord"
+    },
+    {
+      "date": "2026-03-09",
+      "amount": 304558,
+      "description": "Gehalt Muster GmbH"
+    },
+    {
+      "date": "2026-03-10",
+      "amount": -16172,
+      "description": "Kartenzahlung Bäckerei Sonnenschein REF 941309 AUTH CODE 727"
+    },
+    {
+      "date": "2026-03-11",
+      "amount": -15570,
+      "description": "Überweisung Miete März"
+    },
+    {
+      "date": "2026-03-11",
+      "amount": -5799,
+      "description": "Kartenzahlung Bäckerei Sonnenschein"
+    },
+    {
+      "date": "2026-03-12",
+      "amount": -16694,
+      "description": "Kartenzahlung Bäckerei Sonnenschein REF 605515 AUTH CODE 9352"
+    },
+    {
+      "date": "2026-03-13",
+      "amount": 131559,
+      "description": "Gutschrift Erstattung"
+    },
+    {
+      "date": "2026-03-14",
+      "amount": -11813,
+      "description": "Kartenzahlung Supermarkt Nord"
+    },
+    {
+      "date": "2026-03-15",
+      "amount": -1241,
+      "description": "Lastschrift Stadtwerke Strom REF 729227 AUTH CODE 1376"
+    },
+    {
+      "date": "2026-03-16",
+      "amount": -10520,
+      "description": "Kartenzahlung Tankstelle"
+    },
+    {
+      "date": "2026-03-16",
+      "amount": -500,
+      "description": "Kartenzahlung Bäckerei Sonnenschein"
+    },
+    {
+      "date": "2026-03-16",
+      "amount": 266876,
+      "description": "Gehalt Muster GmbH REF 480736 AUTH CODE 6023"
+    },
+    {
+      "date": "2026-03-16",
+      "amount": -16426,
+      "description": "Kartenzahlung Tankstelle"
+    },
+    {
+      "date": "2026-03-16",
+      "amount": -24215,
+      "description": "Kartenzahlung Bäckerei Sonnenschein"
+    }
+  ]
+}

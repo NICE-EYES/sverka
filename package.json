@@ -1,0 +1,17 @@
+{
+  "name": "sverka",
+  "version": "0.1.0",
+  "description": "Bank statement PDF to verified transactions table, 100% local in the browser",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "fixtures": "node scripts/make-fixtures.mjs",
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "pdfjs-dist": "^3.11.174",
+    "pdfkit": "^0.15.0"
+  }
+}

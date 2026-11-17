@@ -1,0 +1,237 @@
+{
+  "opening": 421055,
+  "closing": 1227614,
+  "transactions": [
+    {
+      "date": "2026-03-02",
+      "amount": -15462,
+      "description": "GYM MEMBERSHIP"
+    },
+    {
+      "date": "2026-03-02",
+      "amount": -21545,
+      "description": "POS PURCHASE GREENLEAF GROCERY REF 424886 AUTH CODE 531"
+    },
+    {
+      "date": "2026-03-03",
+      "amount": -24470,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-03-04",
+      "amount": -123456,
+      "description": "PHARMACY PLUS 0042"
+    },
+    {
+      "date": "2026-03-04",
+      "amount": -19645,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2026-03-05",
+      "amount": 305643,
+      "description": "TRANSFER FROM J SMITH"
+    },
+    {
+      "date": "2026-03-06",
+      "amount": -2449,
+      "description": "PHARMACY PLUS 0042 REF 774222 AUTH CODE 8341"
+    },
+    {
+      "date": "2026-03-07",
+      "amount": -24694,
+      "description": "ONLINE TRANSFER TO SAVINGS"
+    },
+    {
+      "date": "2026-03-08",
+      "amount": -11558,
+      "description": "PHARMACY PLUS 0042"
+    },
+    {
+      "date": "2026-03-09",
+      "amount": -15690,
+      "description": "CARD 4417 COFFEE CORNER"
+    },
+    {
+      "date": "2026-03-09",
+      "amount": -15289,
+      "description": "CARD 4417 COFFEE CORNER"
+    },
+    {
+      "date": "2026-03-09",
+      "amount": 227154,
+      "description": "TRANSFER FROM J SMITH REF 417464 AUTH CODE 3127"
+    },
+    {
+      "date": "2026-03-10",
+      "amount": -7894,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2026-03-11",
+      "amount": -15789,
+      "description": "GYM MEMBERSHIP"
+    },
+    {
+      "date": "2026-03-12",
+      "amount": -12264,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-03-13",
+      "amount": -23167,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-03-13",
+      "amount": -4522,
+      "description": "PHARMACY PLUS 0042 REF 490562 AUTH CODE 1785"
+    },
+    {
+      "date": "2026-03-14",
+      "amount": 278012,
+      "description": "INTEREST PAYMENT"
+    },
+    {
+      "date": "2026-03-15",
+      "amount": -18697,
+      "description": "STREAMING SUBSCRIPTION"
+    },
+    {
+      "date": "2026-03-15",
+      "amount": -10316,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-03-15",
+      "amount": -12741,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2026-03-16",
+      "amount": -24080,
+      "description": "PARKING GARAGE CENTRAL REF 391994 AUTH CODE 8847"
+    },
+    {
+      "date": "2026-03-17",
+      "amount": -23892,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-03-17",
+      "amount": 65641,
+      "description": "PAYROLL ACME TOOLS INC"
+    },
+    {
+      "date": "2026-03-18",
+      "amount": -19150,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2026-03-19",
+      "amount": -19060,
+      "description": "STREAMING SUBSCRIPTION"
+    },
+    {
+      "date": "2026-03-20",
+      "amount": -8957,
+      "description": "DEBIT CARD FUEL STATION 21 REF 284971 AUTH CODE 8707"
+    },
+    {
+      "date": "2026-03-21",
+      "amount": -17643,
+      "description": "RESTAURANT LA PIAZZA"
+    },
+    {
+      "date": "2026-03-22",
+      "amount": -13247,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-03-23",
+      "amount": 165786,
+      "description": "PAYROLL ACME TOOLS INC"
+    },
+    {
+      "date": "2026-03-24",
+      "amount": -21687,
+      "description": "PARKING GARAGE CENTRAL"
+    },
+    {
+      "date": "2026-03-24",
+      "amount": -17289,
+      "description": "ACH DEBIT CITY WATER UTILITY REF 626508 AUTH CODE 761"
+    },
+    {
+      "date": "2026-03-24",
+      "amount": -14220,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2026-03-24",
+      "amount": -18824,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    },
+    {
+      "date": "2026-03-25",
+      "amount": -22928,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-03-26",
+      "amount": 304315,
+      "description": "TRANSFER FROM J SMITH"
+    },
+    {
+      "date": "2026-03-26",
+      "amount": -23955,
+      "description": "INSURANCE PREMIUM REF 126463 AUTH CODE 8835"
+    },
+    {
+      "date": "2026-03-27",
+      "amount": -6173,
+      "description": "INSURANCE PREMIUM"
+    },
+    {
+      "date": "2026-03-27",
+      "amount": -16346,
+      "description": "MOBILE PHONE BILL"
+    },
+    {
+      "date": "2026-03-27",
+      "amount": -4800,
+      "description": "BOOKSHOP ON MAIN ST"
+    },
+    {
+      "date": "2026-03-28",
+      "amount": -3524,
+      "description": "POS PURCHASE GREENLEAF GROCERY"
+    },
+    {
+      "date": "2026-03-28",
+      "amount": 159919,
+      "description": "PAYROLL ACME TOOLS INC REF 542180 AUTH CODE 9922"
+    },
+    {
+      "date": "2026-03-28",
+      "amount": -12817,
+      "description": "STREAMING SUBSCRIPTION"
+    },
+    {
+      "date": "2026-03-28",
+      "amount": -1608,
+      "description": "STREAMING SUBSCRIPTION"
+    },
+    {
+      "date": "2026-03-28",
+      "amount": -11200,
+      "description": "ACH DEBIT CITY WATER UTILITY"
+    },
+    {
+      "date": "2026-03-28",
+      "amount": -18863,
+      "description": "PARKING GARAGE CENTRAL"
+    }
+  ],
+  "expectMismatchRow": 17
+}
